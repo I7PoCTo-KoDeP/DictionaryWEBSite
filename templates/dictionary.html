@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ font_awesome.load_css() }}
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/dict.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/topnav.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/footer.css') }}">
+    <title>{{title}}</title>
+</head>
+<body style="background-color: #fff4e7">
+    <div class="topnav">
+        <a class="home" href="/">  На главную</a>
+        <a class="dict active" href="/dict">  К словарю</a>
+    </div>
+
+    <div class="search">
+        <form action="/dict/search" method="POST">
+            <input name="query" placeholder="Введите слово..." type="search">
+            <button type="submit"></button>
+        </form>
+    </div>
+
+    <div class="word_cell">
+        {% for item in words %}
+            <div class="container">
+                <h4>{{item["word"][:item["accent"] + 1]}}&#769;{{item["word"][item["accent"] + 1:]}}</h4>
+                <div>{{item["information"]}}</div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="footer">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+.topnav
+{
+	margin: 0 0 1% 0;
+	background-color: #cfecbb;
+	overflow: hidden;
+	border-radius: 20px;
+}
+.topnav a
+{
+	margin: 5px;
+	float: left;
+	color: #599731;
+	text-align: center;
+	padding: 10px 15px;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: FontAwesome;
+	border-radius: 20px;
+}
+.topnav a:hover
+{
+	background-color: #599731;
+	color: #e8f7df;
+}
+.topnav a.active
+{
+	background-color: #84bd5f;
+	color: #e8f7df;
+}
+.topnav a.dict:before
+{
+	content: "\f02d";
+	font-size: 16px;
+	color: #599731;
+}
+.topnav a.home:before
+{
+	content: "\f015";
+	font-size: 16px;
+	color: #599731;
+}
+.topnav a.dict.active:before
+{
+	content: "\f02d";
+	font-size: 16px;
+	color: #e8f7df;
+}
+.topnav a.home.active:before
+{
+	content: "\f015";
+	font-size: 16px;
+	color: #e8f7df;
+}
+.topnav a.dict:hover:before
+{
+	content: "\f02d";
+	font-size: 16px;
+	color: #e8f7df;
+}
+.topnav a.home:hover:before
+{
+	content: "\f015";
+	font-size: 16px;
+	color: #e8f7df;
+}
