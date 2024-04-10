@@ -10,4 +10,4 @@ blueprint = Blueprint(
 
 @blueprint.route('/')
 def home_page():
-    return render_template('home.html', title='Home')
+    return render_template('home.html', title='Домашняя страница')
