@@ -13,7 +13,7 @@ def main():
     db_session.global_init("db/dictionary.db")
     app.register_blueprint(home_page.blueprint)
     app.register_blueprint(dict.blueprint)
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run()
 
 
 if __name__ == '__main__':
