@@ -21,6 +21,6 @@ def dictionary():
 @blueprint.route('/dict/search', methods=['POST', 'GET'])
 def search():
     db_sess = db_session.create_session()
-    query = request.form['query']
+    query = request.form['query'].upper()
     words = db_sess.query(Word).filter(Word.word.like(f'%{query}%')).all()
     return render_template('dictionary.html', words=words, title='Словарь')
