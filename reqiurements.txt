@@ -1,3 +1,17 @@
+Jinja2
+MarkupSafe
 SQLAlchemy
+blinker
+click
+coloram
 flask
 font-awesome-flask
+greenlet
+importlib-metadata
+importlib-resources
+itsdangerous
+setuptools
+typing-extensions
+werkzeu
+wheel
+zipp
